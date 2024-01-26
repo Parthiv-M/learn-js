@@ -1,13 +1,15 @@
 function setColor(set) {
-        let changeColor = set;
+    let changeColor = set;
+    function set() {
         if(changeColor) {
             let userColor = document.getElementById('color').value;
             document.getElementById('myPara').style.color = userColor;
         }
-        
+    }
+return set;
 }
 
 window.onload = function() {
-    let toggle = true;
-    document.getElementById('btn').onclick = setColor(toggle);
+let toggle = true;
+document.getElementById('btn').onclick = setColor(toggle);
 }
